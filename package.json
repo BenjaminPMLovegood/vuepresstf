@@ -1,0 +1,19 @@
+{
+  "name": "vuepresstf",
+  "version": "0.0.1",
+  "description": "Vuepress Testing Field",
+  "main": "index.js",
+  "authors": {
+    "name": "Benjamin P. M. Lovegood",
+    "email": "benjaminpmlee@gmail.com"
+  },
+  "repository": "https://github.com/BenjaminPMLovegood/vuepresstf",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
