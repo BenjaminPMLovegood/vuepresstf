@@ -12,3 +12,11 @@ export default defineComponent({
   }
 });
 ```
+
+```arith
+1 + 2 - 3 * 4455; # this is a comment
+42 / 7; # + 5?
+65 - 7 * 7;
+```
+
+<el-tag>123</el-tag>

@@ -14,9 +14,12 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/prismjs": "^1.16.6",
     "vuepress": "^2.0.0-beta.27"
   },
   "dependencies": {
-    "@vuepress/plugin-register-components": "^2.0.0-beta.27"
+    "@vuepress/plugin-register-components": "^2.0.0-beta.27",
+    "element-plus": "^1.1.0-beta.24",
+    "prismjs": "^1.25.0"
   }
 }

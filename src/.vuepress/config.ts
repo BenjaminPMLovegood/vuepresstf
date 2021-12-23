@@ -1,6 +1,8 @@
 import { defineUserConfig } from '@vuepress/cli';
 import { DefaultThemeOptions } from "@vuepress/theme-default";
 import { path } from "@vuepress/utils";
+import PrismLanguageExtension from './plugins/PrismLanguageExtension';
+import * as Prism from 'prismjs';
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -57,5 +59,31 @@ export default defineUserConfig<DefaultThemeOptions>({
         componentsDir: path.resolve(__dirname, './components'),
       },
     ],
+    [
+      PrismLanguageExtension,
+      {
+        f: (l: Prism.Languages) => {
+          l['arith'] = {
+            'comment': {
+              pattern: /(^|[^\\])#.*/,
+              lookbehind: true,
+              greedy: true
+            },
+            'number': {
+              pattern: /\d+/,
+              greedy: true,
+            },
+            'operator': {
+              pattern: /(\+|-|\*|\/|\^)/,
+            },
+            'punctuation': {
+              pattern: /;/
+            },
+          };
+
+          console.log("extended");
+        }
+      }
+    ]
   ]
 });
